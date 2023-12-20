@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -11,7 +11,16 @@ import { RouterOutlet } from '@angular/router';
 })
 export class BodyComponent {
 
+  @Input() collapsed = false;
+  @Input() screenWidth = 0;
+
   getBodyClass(): string {
-    return '';
+    let styleClass = '';
+    if(this.collapsed && this.screenWidth > 768) {
+      styleClass = 'body-trimmed';
+    } else if (this.collapsed && this.screenWidth <= 768 && this.screenWidth > 0) {
+      styleClass = 'body-md-screen'
+    }
+    return styleClass;
   }
 }
