@@ -1,7 +1,9 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-cocollapsed' : ''">
     <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()">A</button>
-        <div class="logo-text" *ngIf="collapsed">Angular</div>
+        <button class="logo" (click)="toggleCollapse()"><i class="fal fa-music"></i></button>
+        <div class="d-flex justify-content-center align-items-center" (click)="toggleCollapse()" *ngIf="collapsed">
+            <img class="logo-image" src="assets/logo-ccb-light.png" alt="logo-ccb">
+        </div>
         <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
             <i class="fal fa-times close-icon"></i>
         </button>
@@ -12,7 +14,7 @@
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{exact: true}"
             >
-                <i class="sidenav-link-icon" [class]="data.icon"></i>
+                <img class="sidenav-link-icon" [src]="data.icon">
                 <span class="sidenav-link-text" *ngIf="collapsed">{{ data.label }}</span>
             </a>
         </li>

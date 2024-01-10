@@ -1,22 +1,22 @@
 export const navbarData = [
     {
         routerLink: 'dashboard',
-        icon: 'fal fa-home',
-        label: 'Dashboard'
+        icon: 'assets/calendario-icon.png',
+        label: 'Calendário'
     },
     {
         routerLink: 'ensaio-regional',
-        icon: 'fal fa-home',
+        icon: 'assets/regional-icon.png',
         label: 'Ensaio Regional'
     },
     {
         routerLink: 'ensaios-locais',
-        icon: 'fal fa-home',
+        icon: 'assets/local-icon.png',
         label: 'Ensaios Locais'
     },
     {
         routerLink: 'contato',
-        icon: 'fal fa-home',
+        icon: 'assets/contato-icon.png',
         label: 'Contato'
     },
 ]
